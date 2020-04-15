@@ -1,6 +1,6 @@
 package banco;
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements Tributavel  {
 
 	public ContaCorrente(int agencia, int numero) {
 		
@@ -22,6 +22,10 @@ public class ContaCorrente extends Conta {
 	public void depositar(double total) {
 		setSaldo(getSaldo() + total);
 		
+	}
+	@Override
+	public double getValotImposto() {
+		return super.getSaldo() * 0.01;
 	}
 	
 }

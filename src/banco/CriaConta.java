@@ -17,15 +17,23 @@ public class CriaConta {
 		contaAdriana.getCliente().setNome("Adriana Pollezi");
 
 		
-		System.out.println(contaAdriana.getSaldo());
-		System.out.println(contaHariel.getSaldo());
-		contaHariel.saque(50);
-		contaAdriana.saque(50);
-		System.out.println(contaAdriana.getSaldo());
-		System.out.println(contaHariel.getSaldo());
-		contaAdriana.saque(100.00);
-		System.out.println(contaAdriana.getSaldo());
+//		System.out.println(contaAdriana.getSaldo());
+//		System.out.println(contaHariel.getSaldo());
+//		contaHariel.saque(50);
+//		contaAdriana.saque(50);
+//		System.out.println(contaAdriana.getSaldo());
+//		System.out.println(contaHariel.getSaldo());
+//		contaAdriana.saque(100.00);
+//		System.out.println(contaAdriana.getSaldo());
 
+		SeguroDeVida seguroAdriana = new SeguroDeVida();
+		
+		CalculadorDeImposto calculadora = new CalculadorDeImposto();
+		calculadora.registra(contaAdriana);
+		calculadora.registra(seguroAdriana);
+		System.out.println(calculadora.getTotalImposto());
+		
+		
 	}
 
 }
